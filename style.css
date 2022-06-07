@@ -35,6 +35,22 @@ h1 {
     color: var(--dark-bg-font-color);
 }
 
+.sidebar path {
+    fill: var(--dark-bg-font-color);
+}
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 100px repeat(9, min-content);
+    gap: 10px;
+}
+
+.sidebar > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
 .sidebar > div > h2 > a {
     text-decoration: none;
     color: var(--dark-bg-font-color);
@@ -43,3 +59,4 @@ h1 {
 .sidebar > div > h2 > a:hover {
     color: grey;
 }
+
