@@ -1,5 +1,6 @@
 :root {
     --main-color: rgba(0, 0, 0, 0.85);
+    --dark-bg-font-color: rgb(238, 235, 228);
 }
 
 * { 
@@ -28,4 +29,17 @@
 
 .content {
     background: rgb(235, 235, 235);
+}
+
+h1 {
+    color: var(--dark-bg-font-color);
+}
+
+.sidebar > div > h2 > a {
+    text-decoration: none;
+    color: var(--dark-bg-font-color);
+}
+
+.sidebar > div > h2 > a:hover {
+    color: grey;
 }
