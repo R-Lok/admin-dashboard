@@ -1,0 +1,31 @@
+:root {
+    --main-color: rgba(0, 0, 0, 0.85);
+}
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template-areas: "sidebar header"
+                         "sidebar content";
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    grid-area: sidebar; 
+    background: var(--main-color);
+}
+
+.header {
+    background: white;
+}
+
+.content {
+    background: rgb(235, 235, 235);
+}
