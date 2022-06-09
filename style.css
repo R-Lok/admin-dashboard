@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Roboto&display=swap');
 
 :root {
     --main-color: rgba(0, 0, 0, 0.85);
@@ -87,15 +87,18 @@ h1 {
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     grid-template-areas: "searchbar user-info"
-                         "greeting buttons"
+                         "greeting buttons";
+    justify-items: center;
+    align-items: center;
+    padding: 0 30px 0 30px;
 }
 
 
 .searchbar {
     display: grid;
-    margin: 25px 30px 0 30px;
-    grid-template: min-content min-content / auto 1fr;
+    grid-template: min-content / auto 1fr;
     gap: 10px;
+    width: 100%;
 }
 
 #search {
@@ -103,3 +106,32 @@ h1 {
     border: black 2px solid;
     background:rgb(235, 235, 235);
 }
+
+.user-info {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    gap: 22px;
+    margin-left: 1vw;
+}
+
+.user-info > *:hover {
+    cursor: pointer;
+}
+
+.user-avatar {
+    height: 42px;
+    width: 42px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.header, .content {
+    font-family: "Roboto", sans-serif;
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+
