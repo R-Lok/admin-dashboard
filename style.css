@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Roboto:wght@400;700&display=swap');
 
 :root {
     --main-color: rgba(0, 0, 0, 0.85);
@@ -130,12 +130,43 @@ h1 {
     border-radius: 50%;
 }
 
-.header, .content {
+.header, .content, .greeting {
     font-family: "Roboto", sans-serif;
 }
 
 .user-name {
     font-size: 18px;
+    font-weight: bold;
 }
 
+.greeting {
+    display: grid;
+    grid-template: auto auto / auto 1fr;
+    grid-template-areas: "avatar greeting"
+                         "avatar username";
+    height: 100%;
+    width: 100%;
+    column-gap: 15px;
+}
+
+.greeting img {
+    height: 80%;
+    width: auto;
+    grid-area: avatar;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.greeting p:first-of-type {
+    grid-area: greeting;
+    align-self: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.greeting p:nth-of-type(2) {
+    grid-area: username;
+    font-weight: bold;
+    font-size: 20px;
+}
 
