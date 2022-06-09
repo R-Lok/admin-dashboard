@@ -52,6 +52,10 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.sidebar > div:not(first-of-type):hover {
+    cursor: pointer;
+}
+
 .sidebar > div {
     display: grid;
     grid-template-columns: auto 1fr;
