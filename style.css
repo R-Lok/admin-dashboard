@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap');
+
 :root {
     --main-color: rgba(0, 0, 0, 0.85);
     --dark-bg-font-color: rgb(238, 235, 228);
@@ -46,12 +48,21 @@ h1 {
     padding-bottom: 24px;
 }
 
+.sidebar > div:not(:first-of-type) {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .sidebar > div {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 20px;
     margin: 0 0 0 25px;
+}
+
+.sidebar-title {
+    font-family: "Lobster", sans-serif;
+    font-size: 22px;
 }
 
 .sidebar > .sidebar-title {
