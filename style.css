@@ -52,7 +52,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.sidebar > div:not(first-of-type):hover {
+.sidebar a:hover {
     cursor: pointer;
 }
 
