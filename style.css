@@ -83,3 +83,23 @@ h1 {
     color: grey;
 }
 
+.header {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: "searchbar user-info"
+                         "greeting buttons"
+}
+
+
+.searchbar {
+    display: grid;
+    margin: 25px 30px 0 30px;
+    grid-template: min-content min-content / auto 1fr;
+    gap: 10px;
+}
+
+#search {
+    border-radius: 20px;
+    border: black 2px solid;
+    background:rgb(235, 235, 235);
+}
