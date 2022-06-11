@@ -13,7 +13,7 @@
 
 .container {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template: minmax(200px, 1fr) 4fr / 1fr 3fr;
     grid-template-areas: "sidebar header"
                          "sidebar content";
     height: 100vh;
@@ -92,6 +92,9 @@ h1 {
     align-items: center;
     padding: 0 30px 0 30px;
     background: white;
+    box-shadow: 0px 1px 5px grey;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -165,7 +168,7 @@ h1 {
 .greeting p:nth-of-type(2) {
     grid-area: username;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .buttons {
@@ -191,4 +194,54 @@ button:hover {
     background-color: white;
     color: var(--main-color);
     box-shadow: 1px 1px 2px var(--main-color);
+}
+
+.content {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr; 
+    grid-template-areas: "projects announcements"
+                         "projects trending";
+    gap: 10px;
+}
+
+.projects {
+    grid-area: projects;
+    padding: 20px 15px 50px;
+    display: grid;
+    grid-template: min-content 1fr / 1fr 1fr;
+    grid-template-areas: "heading heading"
+                         "cardcontainer cardcontainer";
+    row-gap: 16px;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.projects-heading {
+    font-size: 20px;
+    font-weight: bold;
+    grid-area: heading;
+}
+
+.card-container {
+    grid-area: cardcontainer;
+    display: grid;
+    grid-template: 250px 250px / repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 32px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    border-left: 10px solid orange;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 10px;
 }
