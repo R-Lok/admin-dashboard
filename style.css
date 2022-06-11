@@ -110,6 +110,7 @@ h1 {
     border: black 2px solid;
     background:rgb(235, 235, 235);
     max-width: 700px;
+    padding-left: 5px;
 }
 
 .header .user-info {
