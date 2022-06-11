@@ -85,7 +85,7 @@ h1 {
 
 .header {
     display: grid;
-    grid-template: 1fr 1fr / minmax(max-content, 1fr) auto;
+    grid-template: 1fr 1fr / minmax(max-content, 2fr) 1fr;
     grid-template-areas: "searchbar user-info"
                          "greeting buttons";
     justify-items: center;
@@ -109,14 +109,16 @@ h1 {
     border-radius: 20px;
     border: black 2px solid;
     background:rgb(235, 235, 235);
+    max-width: 700px;
 }
 
-.user-info {
+.header .user-info {
     display: grid;
     align-items: center;
     grid-template-columns: auto auto 1fr;
     gap: 22px;
     margin-left: 1vw;
+    justify-self: right;
 }
 
 .user-info > *:hover {
@@ -171,13 +173,15 @@ h1 {
     font-size: 24px;
 }
 
-.buttons {
+.header .buttons {
     display: grid;
     grid-template: min-content / auto auto auto;
     gap: 20px;
     height: 100%;
     align-content: center;
     grid-area: buttons;
+    gap: 2vw;
+    justify-self: right;
 }
 
 button {
