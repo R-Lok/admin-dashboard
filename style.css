@@ -85,7 +85,7 @@ h1 {
 
 .header {
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 1fr / minmax(max-content, 1fr) auto;
     grid-template-areas: "searchbar user-info"
                          "greeting buttons";
     justify-items: center;
@@ -144,6 +144,7 @@ h1 {
     height: 100%;
     width: 100%;
     column-gap: 15px;
+    grid-area: greeting;
 }
 
 .greeting img {
@@ -173,6 +174,7 @@ h1 {
     gap: 20px;
     height: 100%;
     align-content: center;
+    grid-area: buttons;
 }
 
 button {
