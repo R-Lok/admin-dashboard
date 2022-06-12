@@ -206,12 +206,12 @@ button:hover {
     grid-template: 1fr 1fr / 3fr 1fr; 
     grid-template-areas: "projects announcements"
                          "projects trending";
-    gap: 10px;
+    gap: 20px;
+    padding: 20px 15px 50px;
 }
 
 .projects {
     grid-area: projects;
-    padding: 20px 15px 50px;
     display: grid;
     grid-template: min-content 1fr / 1fr 1fr;
     grid-template-areas: "heading heading"
@@ -227,7 +227,7 @@ button:hover {
     grid-area: trending;
 }
 
-.projects-heading {
+.projects-heading, .announcements-heading {
     font-size: 20px;
     font-weight: bold;
     grid-area: heading;
@@ -249,4 +249,24 @@ button:hover {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     gap: 10px;
+}
+
+.announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template: min-content 400px / 1fr;
+    grid-template-areas: "heading"
+                         "content";
+    gap: 16px;
+}
+
+.announcements-heading {
+    grid-area: heading;
+}
+
+.announcements-content {
+    background: white;
+    grid-area: content;
+    height: 100%;
+    border-radius: 16px;
 }
