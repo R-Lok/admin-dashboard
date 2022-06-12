@@ -39,7 +39,7 @@ h1 {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 100px repeat(6, min-content) 1fr repeat(2, min-content);
+    grid-template-rows: 100px repeat(9, min-content);
     gap: 10px;
     padding-bottom: 24px;
 }
