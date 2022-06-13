@@ -204,8 +204,8 @@ button:hover {
 .content {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr; 
-    grid-template-areas: "projects announcements"
-                         "projects trending";
+    grid-template-areas: "projects announcements-trending"
+                         "projects announcements-trending";
     gap: 20px;
     padding: 20px 15px 50px;
 }
@@ -241,6 +241,15 @@ button:hover {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     gap: 10px;
+}
+
+.announcements-trending-container {
+    display: grid;
+    grid-area: announcements-trending;
+    grid-template: min-content min-content / 300px;
+    grid-template-areas: "announcements"
+                         "trending";
+    gap: 16px;
 }
 
 .announcements {
