@@ -28,7 +28,7 @@
 .content {
     background: rgb(235, 235, 235);
     display: grid;
-    grid-template: 1fr 1fr / minmax(400px, 3fr) 1fr; 
+    grid-template: min-content min-content / minmax(400px, 3fr) 1fr; 
     grid-template-areas: "projects announcements-trending"
                          "projects announcements-trending";
     gap: 20px;
@@ -252,7 +252,7 @@ button:hover {
 .announcements {
     grid-area: announcements;
     display: grid;
-    grid-template: min-content 400px / 1fr;
+    grid-template: min-content fit-content / 1fr;
     grid-template-areas: "heading"
                          "content";
     gap: 16px;
@@ -260,6 +260,19 @@ button:hover {
 
 .announcements-heading {
     grid-area: heading;
+}
+
+.announcements-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: fit-content / fit-content;
+    grid-auto-rows: fit-content;
+    gap: 20px;
+}
+
+.announcements-content > div:not(:last-child) {
+    border-bottom: 2px rgb(235, 235, 235) solid;
+    padding-bottom: 20px;
 }
 
 .announcements-content, .trending-content {
@@ -271,7 +284,7 @@ button:hover {
 .trending {
     grid-area: trending;
     display: grid;
-    grid-template: min-content 355px / 1fr;
+    grid-template: min-content fit-content / 1fr;
     grid-template-areas: "heading"
                          "content";
     gap: 16px;
