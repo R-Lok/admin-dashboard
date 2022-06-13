@@ -248,6 +248,7 @@ button:hover {
     grid-template-areas: "announcements"
                          "trending";
     gap: 16px;
+    justify-content: center;
 }
 
 .announcements {
@@ -312,6 +313,10 @@ button:hover {
     column-gap: 20px;
 }
 
+.other-user > :not(:last-child):hover {
+    cursor: pointer;   
+}
+
 .other-user > img {
     grid-area: avatar;
 }
@@ -322,4 +327,5 @@ button:hover {
 
 .other-user > .title {
     grid-area: title;
+    color: grey;
 }
