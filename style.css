@@ -264,6 +264,10 @@ button:hover {
     grid-area: heading;
 }
 
+.announcements-content h3:hover {
+    cursor: pointer;
+}
+
 .announcements-content {
     padding: 20px;
     display: grid;
