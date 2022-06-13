@@ -3,6 +3,7 @@
 :root {
     --main-color: rgba(0, 0, 0, 0.85);
     --dark-bg-font-color: rgb(238, 235, 228);
+    --avatar-size: 42px;
 }
 
 * { 
@@ -133,8 +134,8 @@ h1 {
 }
 
 .user-avatar {
-    height: 42px;
-    width: 42px;
+    height: var(--avatar-size);
+    width: var(--avatar-size);
     border: 2px solid black;
     border-radius: 50%;
 }
@@ -290,10 +291,35 @@ button:hover {
     gap: 16px;
 }
 
-.trending-heading {
-    grid-area: heading;
+.trending-content {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
 }
 
-.trending-content {
-    grid-area: content;
+.trending-content img {
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.other-user {
+    display: grid;
+    grid-template: auto auto / min-content 1fr;
+    grid-template-areas: "avatar handle"
+                         "avatar title";
+    column-gap: 20px;
+}
+
+.other-user > img {
+    grid-area: avatar;
+}
+
+.other-user > .handle {
+    grid-area: handle;
+}
+
+.other-user > .title {
+    grid-area: title;
 }
