@@ -241,6 +241,18 @@ button:hover {
     gap: 10px;
 }
 
+.card-links img {
+    height: 32px;
+    width: 32px;
+}
+
+.card-links {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-items: right;
+    gap: 10px;
+}
+
 .announcements-trending-container {
     display: grid;
     grid-area: announcements-trending;
